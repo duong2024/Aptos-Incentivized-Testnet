@@ -67,11 +67,10 @@ sudo chmod +x /usr/local/bin/docker-compose
 
 aptos genesis set-validator-configuration \
     --keys-dir ~/$WORKSPACE --local-repository-dir ~/$WORKSPACE \
-    --username thonguyen \
-    --validator-host 154.12.229.177:6180 \
-    --full-node-host 154.12.229.177:6182
+    --username yournodename \
+    --validator-host yourIP:6180 \
+    --full-node-host yourIP:6182
 
-thonguyen is my node name , 154.12.229.177 is my ip vps . Change your name , ip
 
 6- Create layout YAML file, which defines the node in the validatorSet, for test mode, we can create a genesis blob containing only one node.
   $ nano layout.yaml
@@ -81,7 +80,7 @@ copy the below and paste in the command , replace your name
    ---
 root_key: "0x5243ca72b0766d9e9cbf2debf6153443b01a1e0e6d086c7ea206eaf6f8043956"
 users:
-  - thonguyen
+  - yournodename
 chain_id: 23
 
 save = ctrl + x -> enter
