@@ -38,7 +38,9 @@ sudo chmod +x /usr/local/bin/docker-compose
 3 - Download the validator.yaml, fullnode.yaml and docker-compose.yaml configuration files into this directory
 
  $ wget https://raw.githubusercontent.com/aptos-labs/aptos-core/main/docker/compose/aptos-node/docker-compose.yaml
+ 
  $ wget https://raw.githubusercontent.com/aptos-labs/aptos-core/main/docker/compose/aptos-node/validator.yaml
+ 
  $ wget https://raw.githubusercontent.com/aptos-labs/aptos-core/main/docker/compose/aptos-node/fullnode.yaml
 
 4 - Generate key pairs (node owner key, consensus key and networking key) in your working directory.
@@ -111,4 +113,5 @@ ok ok
 
 CHECK NODE : 
 docker logs -f testnet-validator-1  --tail 5000
+  
 docker logs -f testnet-fullnode-1 --tail 5000
