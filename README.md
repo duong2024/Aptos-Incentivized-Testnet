@@ -5,34 +5,47 @@ Aptos validator node
 
 If you have run a devnet full node before, please stop it first to prevent port conflicts from running the testnet validator node
  $ cd ~/aptos && docker compose down
+ 
  $ apt remove docker docker-compose
 
 1 - install docker , docker-compose , CLI
 
 # Install Docker
 $ wget -O get-docker.sh https://get.docker.com 
+
 $ sudo sh get-docker.sh
+
 $ rm -f get-docker.sh
 
 # Install docker-compose
 sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+
 sudo chmod +x /usr/local/bin/docker-compose
 
 # Install CLI: 
 
  $ mkdir bin
+ 
  $ cd ~/bin
+ 
  $ wget https://github.com/aptos-labs/aptos-core/releases/download/aptos-cli-v0.1.1/aptos-cli-0.1.1-Ubuntu-x86_64.zip
+ 
  $ apt install unzip
+ 
  $ unzip aptos-cli-0.1.1-Ubuntu-x86_64.zip
+ 
  $ chmod +x ~/bin/aptos
+ 
  $ export PATH="$HOME/bin:$PATH"
+ 
  $ source ~/.bashrc
 
 2 - Create a directory for your Aptos node composition. e.g.
 
  $ export WORKSPACE=testnet
+ 
  $ mkdir ~/$WORKSPACE
+ 
  $ cd ~/$WORKSPACE
 
 3 - Download the validator.yaml, fullnode.yaml and docker-compose.yaml configuration files into this directory
